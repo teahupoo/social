@@ -1,6 +1,8 @@
 Social::Application.routes.draw do
 
-  devise_for :users
+  devise_for :users do
+    get "/users/sign_in" => "devise/sessions#new"
+  end
 
   get "site/index"
 
